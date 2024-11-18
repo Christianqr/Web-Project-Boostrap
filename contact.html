@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Semprenoi America | Contacto</title>
+
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+
+	<!-- Google Fonts -->
+	<link href='//fonts.googleapis.com/css?family=Montserrat:700,400|Archivo:400,400i,700' rel='stylesheet'>
+
+	<!-- Css -->
+	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="img/semprenoi_S.jpg">
+	<link rel="apple-touch-icon" href="img/semprenoi_S.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/semprenoi_S.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/semprenoi_S.jpg">
+
+</head>
+
+<body class="single-project" id="home" itemscope itemtype="http://schema.org/WebPage">
+
+	<!-- Preloader -->
+	<div class="loader-mask">
+		<div class="loader">
+			<img class="loader-logo logo" src="img/logo/semprenoi_logo_blanco.png" srcset="img/logo/semprenoi_logo_blanco.png 1x, img/logo/semprenoi_logo_blanco@2x.png 2x" alt="logo"
+				itemtype="http://schema.org/Organization" itemscope>
+				<div class="loader-bar"><span></span></div>
+			"Loading..."
+		</div>
+	</div> 
+
+	<!-- Header -->
+	<header class="nav header" itemtype="http://schema.org/WPHeader" itemscope>
+
+		<div class="nav__holder nav--sticky" id="nav--sticky">
+			<div class="container nav__container">
+				<div class="flex-parent">
+
+					<div class="nav__header clearfix">
+						<!-- Logo -->
+						<div class="logo-wrap local-scroll">
+							<a href="index.html" class="logo__url">
+								<img class="logo logo--dark" src="img/logo/semprenoi_logo.png" srcset="img/logo/semprenoi_logo.png 1x, img/logo/semprenoi_logo@2x.png 2x" alt="logo" itemtype="http://schema.org/Organization" itemscope>
+							</a>
+						</div>
+
+						<button type="button" class="nav__icon-toggle" id="nav__icon-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="nav__icon-toggle-bar"></span>
+							<span class="nav__icon-toggle-bar"></span>
+							<span class="nav__icon-toggle-bar"></span>
+						</button>
+					</div> <!-- end nav-header -->
+
+					<!-- Navbar -->
+					<nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope">              
+						<ul class="nav__menu local-scroll" id="onepage-nav">
+							<li>
+								<a href="index.html" class="nav-link">Home</a>
+							</li>							
+							<li>
+								<a href="single-project.html" class="nav-link">Works</a>
+							</li>            
+							<!-- <li>
+								<a href="index.html#news" class="nav-link">News</a>
+							</li>
+							<li class="nav__dropdown">
+								<a href="#" class="nav-link" aria-haspopup="true">Pages</a>
+								<i class="dorya-icon-chevron-down nav__dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false"></i>
+								<ul class="nav__dropdown-menu">
+									<li>
+										<a href="single-project.html">
+											<span class="nav__dropdown-menu-label">Single Project</span>
+										</a>
+									</li>
+									<li>
+										<a href="single-post.html">
+											<span class="nav__dropdown-menu-label">Single Post</span>
+										</a>
+									</li>
+									<li>
+										<a href="page-404.html">
+											<span class="nav__dropdown-menu-label">Page 404</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="contact.html" class="nav-link active">Contact</a>
+							</li>
+						</ul>  --><!-- end menu -->
+
+					</nav> <!-- end nav-wrap -->
+
+				</div> <!-- end flex-parent -->
+			</div> <!-- end container -->
+
+		</div>
+	</header> <!-- end header -->
+		<div class="main-wrap">
+		<main class="content-wrap">
+
+			<!-- Page Title -->
+			<section class="page-title">
+				<div class="container">
+					<div class="page-title__holder">
+						<h1 class="page-title__title">Bienvenidos al nuevo portal de Semprenoi America!</h1>
+						<p class="page-title__subtitle">Thanks for stopping by! If you'd like to reach out, please send us an email below. We typically respond in 2-3 busines
+						days.</p>
+					</div>
+				</div>
+			</section> <!-- end page title -->
+			<section class="section-project-description pt-56">
+			<div class="container">
+				<div class="div_centrado borde fondo_deg">
+				
+					<h3>Enviar formulario web de contacto por correo e.</h3><br clear="all"><br clear="all">
+						
+					Su nombre <br clear="all"><input type="text" id="nombre" value=""><br clear="all">
+					Correo e. <br clear="all"><input type="email" id="correo" value=""><br clear="all">
+					Comentarios <br clear="all"><input type="text" id="comentarios" value=""><br clear="all"><br clear="all">
+					
+					<button type="button" name="enviar" onclick="javascript:enviar_correo();">Enviar correo</button>
+					
+					<br clear="all"><br clear="all">
+				</div>
+			</div>
+			</body>
+			<link rel="stylesheet" href="ejemplo.css">
+			<script src="jquery-2.1.3.js"></script>
+	
+			<script>
+			function enviar_correo(){
+			  var correo = new FormData();
+	
+			  correo.append("nombre", document.getElementById("nombre").value);
+			  correo.append("correo", document.getElementById("correo").value);
+			  correo.append("comentarios", document.getElementById("comentarios").value);
+	
+			  $.ajax({
+				url: "enviarcorreo.php",
+				type:"POST",
+				data: correo,
+				cache:false,
+				contentType: false,
+				processData: false,
+				success: function(resp){
+				  console.log(resp);
+				  msj=JSON.parse(resp);
+				  alert(msj.mensaje);
+				}
+			  });
+	
+			}
+			</script>
+			</section>
+			<!-- Contact Info -->
+			<section class="section-contact-info">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="contact-info">
+								<h3 class="contact-info__title">New Projects</h3>
+								<a href="mailto:hello@doryaagency.com" class="contact-info__email">hello@doryaagency.com</a>
+								<a href="tel:+61-3-9671-3953" class="contact-info__phone">+61 3 9671 3953</a>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="contact-info">
+								<h3 class="contact-info__title">Press</h3>
+								<a href="mailto:hello@doryaagency.com" class="contact-info__email">hello@doryaagency.com</a>
+								<a href="tel:+61-3-9671-3953" class="contact-info__phone">+61 3 9671 3953</a>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="contact-info">
+								<h3 class="contact-info__title">Address</h3>
+								<address class="contact-info__address">Level 7, 289 Flinders Lane<br>
+								Melbourne, Victoria 3000</address>				
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- contact info -->
+
+			<!-- Contact Image -->
+			<img src="img/contact/contact_bg.jpg" alt="contact" class="section-contact-image">
+
+
+			<!-- Team -->
+			<section class="section-team section-large-padding">
+				<div class="container">
+					<p class="team-subtitle">We’re honest folk that believe in hard work and building lasting relationships. We enjoy making companies look better
+					with great design.</p>
+					<div class="row row-50">
+						<div class="col-lg-4">
+							<div class="team">
+								<img src="img/team/team_1.jpg" class="team__img" alt="">
+								<h4 class="team__name">José Romero</h4>
+								<a href="mailto:hellomathew@gmail.com" class="team__email">hellomathew@gmail.com</a>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="team">
+								<img src="img/team/team_2.jpg" class="team__img" alt="">
+								<h4 class="team__name">Reinaldo Villegas</h4>
+								<a href="mailto:hellomona@gmail.com" class="team__email">hellomona@gmail.com</a>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="team">
+								<img src="img/team/team_3.jpg" class="team__img" alt="">
+								<h4 class="team__name">Christian Quintero</h4>
+								<a href="mailto:helloclark@gmail.com" class="team__email">helloclark@gmail.com</a>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</section> <!-- end team -->
+
+		</main> <!-- end content wrap -->
+
+		<!-- Footer -->
+		<footer class="footer bg-dark" itemtype="http://schema.org/WPFooter" itemscope>
+			<div class="container">
+				<div class="footer__cta">
+					<div class="row justify-content-center">
+						<div class="col-lg-8">
+							<div class="widget widget-cta text-center">
+								<h3 class="widget-cta__title mb-32">Got a Project?
+									<a href="contact.html" class="widget-cta__link">
+										<span class="animate-letters">Let’s Get to Work</span>
+									</a>
+								</h3>								
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="footer__widgets">
+					<div class="row">
+
+						<div class="col-lg-8 col-md-6">
+							<div class="widget widget-about-us">
+								<address class="widget-about-us__address">piso 1, CC La Grieta<br>
+								Valencia, El viñedo</address>
+								<a href="mailto:hello@doryaagency.com" class="widget-about-us__email">hello@Semprenoi.net</a>
+								<a href="tel:+61-3-9671-3953" class="widget-about-us__phone">+58 424-6900069</a>
+							</div>
+						</div> <!-- end about us -->						
+
+						<div class="col-lg-2 col-md-3">
+							<div class="widget widget-nav-menu">
+								<ul>
+									<li><a href="#">Work</a></li>
+									<li><a href="#">Studio</a></li>
+									<li><a href="#">News</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</div>
+						</div> <!-- end widget nav menu -->
+
+						<div class="col-lg-2 col-md-3">
+							<div class="widget widget-nav-menu">
+								<ul>
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+									<li><a href="#">Twitter</a></li>
+								</ul>
+							</div>
+						</div> <!-- end widget nav menu -->
+
+					</div>
+				</div>    
+			</div> <!-- end container -->
+
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<a href="#home" class="logo__url">
+								<img class="logo" src="img/logo/semprenoi_logo.png" srcset="img/logo/semprenoi_logo.png 1x, img/logo/semprenoi_logo@2x.png 2x" alt="logo" itemtype="http://schema.org/Organization" itemscope>
+							</a>
+						</div>
+						<div class="col-md-6">
+							<div class="widget widget-nav-menu">
+								<ul>
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Legal Terms</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- end footer bottom -->
+
+		</footer> <!-- end footer -->
+
+		<div class="footer-placeholder"></div>
+
+
+	</div> <!-- end main wrap -->
+	
+
+	<!-- JS Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	
+</body>
+</html>
